@@ -1,13 +1,122 @@
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    color: rgba(51, 136, 216, 0.336);
+    color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
-body
+body{
+    background: rgba(143, 143, 143, 0.8);
+    margin: 10px;
+}
+
+#container
 {
-    background: #233548;
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-auto-rows: repeat(8,1fr);
+    /* max-width: auto; */
+    gap:10px;
+    grid-template-areas: 
+    "header header header"
+    ". nav ."
+    "aside1 main aside2"
+    "aside1 section aside2"
+    "aside1 section aside2"
+    "aside1 answer aside2"
+    "aside1 answer aside2"
+    "footer footer footer";
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 760px)
+{
+    #container
+    {
+     background-color: #fff;
+    display:grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "aside1 aside2 aside2"
+    "aside1 aside2 aside2"
+    "main main main"
+    "section section section"
+    "answer answer answer"
+    "footer footer footer";
+    margin-top: 60px;
+    margin-bottom: 60px;
+    }
+}
+#container >*
+{
+    /* background: rgba(44, 8, 143, 0.849); */
+    padding:30px;
+}
+
+header{
+    grid-area: header;
+    background-color: rgba(0, 0, 0, .8);
+    background: rgba(143, 143, 143, 0.8);
+    position: fixed;
+    top: 0;
+    width:100%;
+    margin:-10px;
+    height: 10px;
+    display: block;
+}
+
+nav{
+    grid-area: nav;
+    /* background-color: rgba(0, 0, 0, .8); */
+}
+
+main{
+    grid-area: main;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: left;
+}
+
+.choices {
+    grid-area: section;
+    background-color: rgba(0, 0, 0, .8);
+
+}
+
+.answer{
+    grid-area: answer;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: left;
+}
+
+.aside1{
+    grid-area: aside1;
+    background-color: rgba(0, 0, 0, .8);  
+    /* padding: 60px 60px 60px 60px; */
+}
+
+.aside2{
+    grid-area: aside2;
+    background-color: rgba(0, 0, 0, .8);
+    /* padding: 60px 60px 60px 60px; */
+}
+
+footer{
+    grid-area: footer;  
+    background-color: rgba(0, 0, 0, .8);
+}
+
+#myFooter
+{
+    background: rgba(143, 143, 143, 0.8);
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    margin:-10px;
+    height: 20px;
+    display: block;
+    text-align: center;
+
 }
