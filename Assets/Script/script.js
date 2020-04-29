@@ -1,5 +1,5 @@
 /**Initialize game to default/begin state */
-let time = 15
+let time = 120
 let index = 0
 let currentScore = 0
 let highScore = 0
@@ -101,7 +101,7 @@ let results = (str) =>
         {
             console.log(isOver)
             console.log('it goes here instead')
-            time -= 2
+            time -= 5
         }
     }
 
@@ -171,7 +171,7 @@ let gameOver = () =>
 {
             //Initalize to default to start new game
             clearInterval(interval)
-            time = 15
+            time = 120
             index = 0
             currentScore = 0
             isOver = false

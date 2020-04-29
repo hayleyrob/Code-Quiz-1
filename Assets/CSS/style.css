@@ -58,8 +58,6 @@ body{
 
 header{
     grid-area: header;
-    background-color: rgb(0, 0, 0);
-    background: rgb(143, 143, 143);
     position: fixed;
     top: 0;
     width:100%;
@@ -109,7 +107,6 @@ main{
 .aside1{
     grid-area: aside1;
     background-color: rgba(0, 0, 0, .8);  
-    /* position:fixed; */
 }
 
 .aside2{
