@@ -58,8 +58,8 @@ body{
 
 header{
     grid-area: header;
-    background-color: rgba(0, 0, 0, .8);
-    background: rgba(143, 143, 143, 0.8);
+    background-color: rgb(0, 0, 0);
+    background: rgb(143, 143, 143);
     position: fixed;
     top: 0;
     width:100%;
@@ -82,7 +82,17 @@ main{
 .choices {
     grid-area: section;
     background-color: rgba(0, 0, 0, .8);
+}
 
+.choices li{
+    list-style-type: none;
+}
+
+.btn{
+    
+    margin: 5px;
+    width: 100%;
+     text-align: left;
 }
 
 .answer{
@@ -94,13 +104,18 @@ main{
 .aside1{
     grid-area: aside1;
     background-color: rgba(0, 0, 0, .8);  
-    /* padding: 60px 60px 60px 60px; */
+    /* position:fixed; */
 }
 
 .aside2{
     grid-area: aside2;
     background-color: rgba(0, 0, 0, .8);
-    /* padding: 60px 60px 60px 60px; */
+    text-align: left;
+}
+
+.aside2 >*
+{
+    text-align: left;
 }
 
 footer{
@@ -109,14 +124,14 @@ footer{
 }
 
 #myFooter
-{
-    background: rgba(143, 143, 143, 0.8);
+{  
     position: fixed;
-    bottom: 0;
-    width:100%;
-    margin:-10px;
-    height: 20px;
-    display: block;
-    text-align: center;
-
+    height: 0px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+    
 }
