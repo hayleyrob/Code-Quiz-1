@@ -23,8 +23,8 @@ body{
     "aside1 main aside2"
     "aside1 section aside2"
     "aside1 section aside2"
-    "aside1 answer aside2"
-    "aside1 answer aside2"
+    "aside1 rules aside2"
+    "aside1 rules aside2"
     "footer footer footer";
     margin-top: 60px;
     margin-bottom: 60px;
@@ -44,7 +44,7 @@ body{
     "aside1 aside2 aside2"
     "main main main"
     "section section section"
-    "answer answer answer"
+    "rules rules rules"
     "footer footer footer";
     margin-top: 60px;
     margin-bottom: 60px;
@@ -95,9 +95,14 @@ main{
      text-align: left;
 }
 
-.answer{
-    grid-area: answer;
+.rules{
+    grid-area: rules;
     background-color: rgba(0, 0, 0, .8);
+    text-align: left;
+}
+
+.rules p
+{
     text-align: left;
 }
 

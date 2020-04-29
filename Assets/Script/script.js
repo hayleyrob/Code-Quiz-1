@@ -43,7 +43,7 @@ $(document).on('click', event =>
     }
 
     if(event.target.id === 'btnAnswer3' && gameStart)
-    {
+    { 
        
         results(questions[index].choices.indexOf(event.target.textContent))
     }
