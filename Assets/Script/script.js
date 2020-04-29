@@ -12,6 +12,7 @@ document.getElementById("reset").disabled = true
 $(document).on('click', event =>
 {   
 
+    // Check if "Start" button is clicked
     if(event.target.id === 'start')
     {
         timer()
@@ -19,6 +20,7 @@ $(document).on('click', event =>
         document.getElementById('currentScore').textContent = currentScore
     }
 
+    // Check if "Play Again" button is clicked
     if(event.target.id === 'reset')
     {
         gameOver()
@@ -27,6 +29,7 @@ $(document).on('click', event =>
         document.getElementById('currentScore').textContent = currentScore
     }
 
+    // Check answer
     if(index < questions.length && !isOver)
     {
     if(event.target.id === 'btnAnswer1' && gameStart)
@@ -56,10 +59,8 @@ $(document).on('click', event =>
     else
     {
         isOver = true
-        gameOver()
     }
-    
-    
+
 })
 
 /** start the game */
@@ -104,6 +105,7 @@ let results = (str) =>
         }
     }
 
+    // Check if all the questions are answered 
         let temp = questions.length
         if(index === temp)
         {
@@ -112,6 +114,31 @@ let results = (str) =>
             console.log(isOver)
             document.getElementById("reset").disabled = false
         }
+
+        // Check if game is over and not answered all questions
+        if(isOver && index < questions.length)
+                {
+                    if (index > 1)
+                    {
+                    document.getElementById('question').innerHTML = `Good job ! you made it through ${currentScore} question(s). 
+                                                                        Wanna try again? Press the "Play Again" button above.`
+                    }
+                    else
+                    {  
+                        document.getElementById('question').innerHTML = `Uh oh... ! Please press the "Try Again" button above to play again`
+                    }
+
+                    // Set "Play Again" button to be click able again
+                    document.getElementById("reset").disabled = false
+
+                    // Set time to be default to 0 to prevent negative number
+                    if (time < 0)
+                    {
+                        time = 0
+                    }
+                    $('.second').text(time)
+
+                }
 }
 
 /** Store high score into client-side storage */
@@ -142,20 +169,6 @@ const getHighScore = () =>
 /** If game is over, set scene to display play again button*/
 let gameOver = () =>
 {
-     // Check if game is over and not answered all questions
-     if(isOver && index < questions.length)
-                {
-                    if (index > 1)
-                    {
-                    document.getElementById('question').innerHTML = `Good job ! you made it through ${currentScore} question(s). 
-                                                                        Wanna try again? Press the "Play Again" button above.`
-                    }
-                    else
-                    {  
-                        document.getElementById('question').innerHTML = `Uh oh... ! Please press the "Try Again" button above to play again`
-                    }
-}
-
             //Initalize to default to start new game
             clearInterval(interval)
             time = 15
@@ -173,12 +186,12 @@ let timer = () =>
     interval = setInterval(function(){ 
         if(time >= 0)
                 {
-                $('.second').text(time--); 
+                $('.second').text(time--)
                 }     
                 else
                 {
                     isOver = true
-                    gameOver()
+                    results("")
                     clearInterval(interval)
                 }  
                 if(index === questions.length)

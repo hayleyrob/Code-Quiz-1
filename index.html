@@ -13,15 +13,19 @@
 
     <div id="container">
 
+            <!-- Header - Code Quiz Challenge -->
             <header class ="badge badge-danger">Code Quiz Challenge</header>
 
+            <!-- Play and reset buttons -->
             <nav class ="myBtn">
                 <button id="start" class = "btn btn-primary btn-lg btn-block">Start</button>
                 <button id="reset" class = "btn btn-primary btn-lg btn-block">Play Again</button>
             </nav>
 
+            <!-- Questions area -->
             <main id="question">CLICK ON START TO BEGIN</main>
 
+            <!-- Choices -->
             <section class="choices">
                <li> <button type="button" class="btn btn-primary" id="btnAnswer1">_</button> </li>
                <li> <button type="button" class="btn btn-primary" id="btnAnswer2">_</button> </li>
@@ -29,6 +33,7 @@
                <li> <button type="button" class="btn btn-primary" id="btnAnswer4">_</button> </li>
             </section>
 
+            <!-- Game rules -->
             <section class="rules" id="rules">
                 <u>Rules:</u><br>
                You will have 15 seconds to complete this quiz<br>
@@ -36,14 +41,17 @@
                 Everytime an incorrect answer is selected, 2 seconds will be take away<br>
             </section>
 
+            <!-- Left side that show time -->
             <aside class="aside1 font-weight-bolder" id="aside1"><h3 class="time"><u>Time:</u></h3> <span class="second"></span> second(s)</aside>
            
+            <!-- Right side that shows score -->
             <aside class="aside2">
                 <h3 class ="score"><u>Score</u></h3>
                 <p class ="currentScore">Current Score: <span id="currentScore"></span></p>
                 <p class ="highScore">High Score: <span id="highScore"></span></p>
             </aside>
             
+            <!-- Footer -->
             <footer id="myFooter" class="badge badge-info">Made by Tim <p id='date'></p></footer>
 
     </div>
