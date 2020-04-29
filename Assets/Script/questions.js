@@ -35,7 +35,7 @@ let questions = [
     },
     {
         question: `An array is enclosed in: `,
-        choices: [`quotes`, `curly brackets`, `parentheses`, `square brackets`],
+        choices: [`'quotes'`, `{curly brackets}`, `(parentheses)`, `[square brackets]`],
         answer: 3
     },
     {
@@ -70,7 +70,7 @@ let questions = [
     },
     {
         question: `Which of the following function of an array object adds and/or removes elements from an array?`,
-        choices: [`toSource( )`, `sort()`, `unshift()`, `splice()`],
+        choices: [`toSource()`, `sort()`, `unshift()`, `splice()`],
         answer: 3
     },
     {
