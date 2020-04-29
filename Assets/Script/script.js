@@ -175,6 +175,14 @@ let timer = () =>
 /** Get data from client-side storage and store it into highscore */
 highScore = getHighScore()
 
+// Date on footer
+document.getElementById("date").textContent = `${Date().slice(0,33)}`
+setInterval(function(){ 
+               
+            document.getElementById("date").textContent = `${Date().slice(0,33)}`
+            
+         }, 1000)
+
 
 // let timer = 3
 // let isClick  = false
