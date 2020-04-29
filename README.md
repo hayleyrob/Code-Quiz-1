@@ -6,9 +6,9 @@ The Purpose of this site is to test a user on code within the given time range
 
 The following image demonstrates the application functionality:
 
-![UI](./image/UI.png)
-![Start](./image/UI-Start.png)
-![Finish](./image/UI-Finsihed-Store-High-Score-Into-Local-Storage.png)
+![UI](./image/UI.PNG)
+![Start](./image/UI-Start.PNG)
+![Finish](./image/UI-Finsihed-Store-High-Score-Into-Local-Storage.PNG)
 
 ## Review
 
