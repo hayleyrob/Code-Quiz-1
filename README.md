@@ -8,7 +8,7 @@ The following image demonstrates the application functionality:
 
 ![UI](./Image/UI.PNG)
 ![Start](./Image/UI-Start.PNG)
-![Finish](./Image/UI-Finsihed-Store-High-Score-Into-Local-Storage.PNG)
+![Finish](./Image/UI-Mobile.PNG)
 
 ## Review
 
